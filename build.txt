@@ -1,0 +1,4 @@
+author = Graydee &amp; Schmo
+version = 0.1
+displayName = Crystilium Reloaded
+buildIgnore = .gitignore, *.sln, *.csproj, *.user, obj\*, bin\*, .vs\*, Properties\*, .git\*
