@@ -13,7 +13,8 @@ namespace Crystal
 			{
 				Autoload = true,
 				AutoloadGores = true,
-				AutoloadSounds = true
+				AutoloadSounds = true,
+				AutoloadBackgrounds = true
 			};
 		}
 		public override void UpdateMusic(ref int music)
@@ -23,7 +24,7 @@ namespace Crystal
 			//Don't override the songs in this list!
 			int[] NoOverride = {MusicID.Boss1, MusicID.Boss2, MusicID.Boss3, MusicID.Boss4, MusicID.Boss5,
 				MusicID.LunarBoss, MusicID.PumpkinMoon, MusicID.TheTowers, MusicID.FrostMoon, MusicID.GoblinInvasion,
-				MusicID.PirateInvasion, GetSoundSlot(SoundType.Music, "Sounds/Music/CrystalKing")};
+				MusicID.PirateInvasion, GetSoundSlot(SoundType.Music, "Music/CrystalKing")};
 
 			bool playMusic = true;
 			foreach(int n in NoOverride) {
@@ -31,7 +32,7 @@ namespace Crystal
 			}
 
 			if(player.active && player.GetModPlayer<CrystalPlayer>(this).ZoneCrystal && !Main.gameMenu && playMusic) {
-					music = this.GetSoundSlot(SoundType.Music, "Music/Crystal");
+					music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/Crystal");
 			}
 		}
 	}
